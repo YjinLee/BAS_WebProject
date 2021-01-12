@@ -1,0 +1,122 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HtmlReview</title>
+  </head>
+  <body>
+    <!-- p태그 (block 요소) -->
+    <p>
+      이것은 문단이다. 내가 이렇게 띄어쓰고싶어도 공백을 주고 싶어도
+      브라우저에서는 무시하지롱
+    </p>
+    <p>그리고 브라우저의 크기(휴대폰, PC)에 따라 출력되는 라인 자동 바뀜</p>
+
+    <h1>This is heading 1</h1>
+    <hr />
+    <!-- hr은 선 만들기 br은 줄 바꿈 태그-->
+    <br />
+
+    <!-- link에서 target을 _blank로 하면 현재 창이 아닌 새로운 창에 링크 방문 -->
+    <a href="http://www.google.com" target="_blanck"> google에 방문하기 </a>
+
+    <!-- create bookmark 예제 따라하기 p.36-->
+    <h2>목차</h2>
+    <a href="#first">홍길동은 누구? </a>
+    <p><a href="#second">홍길동의 직업은? </a></p>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <hr />
+    <a id="first"> 홍길동은 누구? </a>
+    <p>본명: 홍길동.</p>
+    <p>소개: 평범한건 싫고, 나만의 멋을 만들며 산다.</p>
+    <hr />
+    <p><a id="second"> 홍길동의 직업은? </a></p>
+    <p>홍길동의 직업을 묻지마라 <br />다친다.</p>
+
+    <!-- form 태그 예제 따라하기 p.62-->
+    <form action="#" method="get">
+      아이디:<input type="text" name="id" size="10" maxlength="8" /><br />
+      <!-- maxlength로 최대 입력 가능 숫자 지정 가능-->
+      <!-- input태그는 value를 통해서 브라우저에 해당 값 나타나게-->
+      이름: <input type="text" name="name" value="홍길동" /><br />
+      암호:<input type="password" name="pwd" /><br />
+      <input type="checkbox" name="chk" value="computer" checked /> 컴퓨터
+      <!-- checked를 통해 이미 선택되어있게 하는 것 가능-->
+      <input type="checkbox" name="chk" value="mouse" /> 마우스 <br />
+      <input type="radio" name="fruits" value="apple" />사과
+      <input type="radio" name="fruits" value="pear" />배
+      <input type="radio" name="fruits" value="orange" /> 오렌지
+      <!-- hidden은 사용자에게 보여지지 않는 필드, 폼 제출 시 사용자가 변경해서는 안되는 데이터 함께 보낼때 사용 -->
+      <input type="hidden" name="myvalue" value="hidden" />
+      <!--reset으로 사용자가 선택한 것 초기화 가능-->
+      <input type="reset" />
+
+      <input type="submit" />
+    </form>
+
+    <!--input file 타입을 통해 파일 첨부 가능. accept 통해 jpg 등과 같이 파일양식 제한 가능-->
+    <input type="file" accept="image/jpg, image/gif" name="fileName" />
+
+    <!-- form button예제 따라하기 p.67-->
+    <form action="#" method="GET">
+      <p>
+        <input
+          type="button"
+          value="normal button"
+          onclick="alert('일반버튼 클릭')"
+        />
+      </p>
+      <p>
+        <button type="button" onclick="alert('그림 넣은 버튼')">
+          <!-- button에 img 파일 넣기-->
+          <img src="button.png" /> 버튼에 그림 넣기
+        </button>
+      </p>
+      <div>
+        <!-- input 태그로 값 입력받고 취소버튼으로 리셋, submit버튼으로 전송-->
+        <input type="text" placeholder="당신의 이름을 입력하세요" />
+        <button type="reset">취소 버튼</button>
+        <button type="submit">전송입니다.</button>
+      </div>
+    </form>
+
+    <!-- form select, option 따라하기 p.69-->
+    <div style="margin: 10px">
+      <form action="#" method="GET" name="frm1">
+        <select multiple size="4" name="component_select">
+          <option selected value="Com1">Component_1</option>
+          <option selected value="Com2">Component_2</option>
+          <option value="Com3">Component_3</option>
+          <option value="Com4">Component_4</option>
+          <option value="Com5">Component_5</option></select
+        ><br />
+        <input type="submit" value="선택완료" /><input
+          type="reset"
+          value="재설정"
+        />
+      </form>
+    </div>
+    <!-- form p.73,74-->
+    <form action="#" method="get">
+      <p>Select your favorite color: <input type="color" name="favcolor" /></p>
+      <p>BirthDay <input type="date" name="bday" /></p>
+    </form>
+
+    <form action="#" method="get">
+      <p>
+        Quantity (between 1 and 5):
+        <input
+          type="number"
+          name="Quantity"
+          min="1"
+          max="5"
+          value="1"
+          step="1"
+        />
+      </p>
+      <p><input type="range" name="points" min="0" max="10" value="5" /></p>
+      <p>Googling <input type="search" name="Googling" /></p>
+      <input type="submit" value="수정" />
+    </form>
+  </body>
+</html>

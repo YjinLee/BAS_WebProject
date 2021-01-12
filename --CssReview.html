@@ -1,0 +1,90 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CssReview</title>
+  </head>
+  <style>
+    /* 하나의 element에 대해서는 바로 써줌 */
+    div {
+      text-align: center;
+      color: indianred;
+    }
+
+    .myStyle1 {
+      color: lightskyblue;
+    }
+    /* p태그 중 myStyle2 클래스에 대한 적용 */
+    p.myStyle2 {
+      font-size: 15pt;
+      background: lightyellow;
+    }
+
+    h2,
+    p {
+      background: mediumpurple;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    tr:nth-child(2n + 1) {
+      /*tr의 부모요소 내에 홀수번째 자식들에 대해서만 적용하기 */
+      background: mistyrose;
+    }
+    tr:hover {
+      background-color: olive;
+    }
+  </style>
+  <body>
+    <!-- element Selector-->
+    <div>Here's a div with some text.</div>
+    <p>Here's a p with some text.</p>
+    <div>Here's a div with more text.</div>
+
+    <!-- .class Selector -->
+    <h1 class="myStyle1">Welcome to MY Homepage</h1>
+    <p>My best friend is Mickey</p>
+    <div class="myStyle1">div태그 mystyle1 적용</div>
+    <p class="myStyle1">p태그 style1 적용</p>
+    <div class="myStyle2">div 태그 myStyle2 적용</div>
+    <p class="myStyle2">p태그 p.myStyle2 적용</p>
+
+    <!-- group Selector-->
+    <h2>h2에 보라색 배경</h2>
+
+    <!-- 의사 클래스 선택자-->
+    <table border="1">
+      <tr>
+        <th>1</th>
+        <td>1-1</td>
+        <td>1-2</td>
+      </tr>
+      <tr>
+        <th>2</th>
+        <td>2-1</td>
+        <td>2-2</td>
+      </tr>
+      <tr>
+        <th>3</th>
+        <td>3-1</td>
+        <td>3-2</td>
+      </tr>
+      <tr>
+        <th>4</th>
+        <td>4-1</td>
+        <td>4-2</td>
+      </tr>
+      <tr>
+        <th>5</th>
+        <td>5-1</td>
+        <td>5-2</td>
+      </tr>
+      <tr>
+        <th>6</th>
+        <td>6-1</td>
+        <td>6-2</td>
+      </tr>
+    </table>
+  </body>
+</html>
